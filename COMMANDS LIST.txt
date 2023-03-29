@@ -1,0 +1,94 @@
+#CREATE GIT REPO
+git init - intialize git  
+git status - check the tracked untracked changes 
+git add <index.html styles.css> - add files to git
+git add . - stage the untracked changes
+git commit -m "initial commit" - add a commit to git
+
+
+#CREATE USER
+git config --global user.name gayan
+git config --global user.email gayandilankak@gmail.com
+
+#CHECK THE COMMINTMENTS
+git log- check the commitments in detail
+git log --oneline - check the commitments only with comments
+git show HEAD - check the last commitment
+git show <commitment id> - check the commitment in detail
+
+
+#RESTORE THE CHANGES 
+git restore <index.html> - restore the last unstaged change 
+git checkout <index.html> - restore the last changes on a file, use this
+git checkout <commit id>  - revert to a previous stage
+git checkout master - revert back to current state 
+
+git revert <commit id > - this will revert a specific commit and commit as a new commit to the master branch 
+
+git reset --mixed  <commit id >  - use carefully , this will send a specific commit to unstaged area . if you need remove it from unstaged area use git checkout .
+
+git reset --soft  <commit id > -  this will send a specific commit to staged area . if you need remove it from staged area use git reset .
+
+git reset --hard  <commit id > - this will remove all the commits and unmodify the files 
+
+
+#Ignore the files
+
+create a file name called .gitignore and add the file names inside it. 
+Example : 
+/test_1.txt
+/test_2.txt
+
+#Git hub
+
+#push an existing repository from the command line
+git remote add origin https://github.com/GayanDilanka/gitProject.git
+git branch -M main
+git push -u origin main
+git push origin master
+
+Pull from git hub 
+git pull origin master
+
+#BRANCHING
+git branch feature-1 - create a new branch
+git checkout feature-1 - switch to featuere branch
+git branch -D feature-3 - Delete a branch 
+git push origin feature-1 - push to git hub
+git pull origin feature-3 - pull from git hub
+git checkout --track origin/feature-3 - adter pull run this command to add to the local repo
+git pull origin feature-3 - if we do any changes in a branch
+
+in git hub , then run this command to pull it to the local repo
+
+Merge Branches
+1-Create new branch 
+2-do the changes
+3-commit the changes
+4-switch back to master
+5-run the command "git merger <branch name>
+
+ 
+3 way Merge
+This need when one both master and working branched are both modified simlutaneously
+
+How to fix merge conflicts - Compare and edit files manually
+
+git merge --abort - abort the merge
+
+
+#GIT REBASE - the process of moving or combining a sequence of commits to a new base commit
+This need to do when the master go ahead than a feature branch
+
+git rebase master - you can run this on the feature branch to change the base 
+
+ 
+
+
+
+
+
+
+
+
+
